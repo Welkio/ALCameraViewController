@@ -230,12 +230,12 @@ extension CameraViewController {
     func configSwapButtonGravityConstraint(_ portrait: Bool) {
         swapButtonGravityConstraint = NSLayoutConstraint(
             item: swapButton,
-            attribute: portrait ? .right : .bottom,
+            attribute: portrait ? .left : .top,
             relatedBy: .lessThanOrEqual,
             toItem: containerSwapLibraryButton,
             attribute: portrait ? .centerX : .centerY,
             multiplier: 1.0,
-            constant: -4.0 * DeviceConfig.SCREEN_MULTIPLIER)
+            constant: 4.0 * DeviceConfig.SCREEN_MULTIPLIER)
         view.addConstraint(swapButtonGravityConstraint!)
     }
     

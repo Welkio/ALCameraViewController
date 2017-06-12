@@ -162,7 +162,7 @@ open class CameraViewController: UIViewController {
         allowCropping = croppingEnabled
         cameraOverlay.isHidden = !allowCropping
         libraryButton.isEnabled = allowsLibraryAccess
-        libraryButton.isHidden = !allowsLibraryAccess
+        libraryButton.isHidden = true//!allowsLibraryAccess
     }
   
     required public init?(coder aDecoder: NSCoder) {
